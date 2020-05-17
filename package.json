@@ -41,7 +41,8 @@
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2",
-    "@ledge-framework/render": "latest"
+    "@ledge-framework/render": "latest",
+    "@ledge-framework/view": "latest"
   },
   "devDependencies": {
     "@angular-devkit/build-ng-packagr": "~0.900.5",

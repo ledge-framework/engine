@@ -927,6 +927,16 @@
   resolved "https://registry.yarnpkg.com/@istanbuljs/schema/-/schema-0.1.2.tgz#26520bf09abe4a5644cd5414e37125a8954241dd"
   integrity sha512-tsAQNx32a8CoFhjhijUIhI4kccIAgmGhy8LZMZgGfmXcpMbPRUqn5LWmgRttILi6yeGmBJd2xsPkFMs0PzgPCw==
 
+"@ledge-framework/render@latest":
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/@ledge-framework/render/-/render-0.6.3.tgz#66e999b0c7c5ecbffcefbd54eb8c8caa4fc0290b"
+  integrity sha512-KMn0dYj5ClP1XJoZjHXB5i/hCwNE+icKtornIk3CFAErZelUsQAGL+4ulCmtM5lUxJ4gm0vYxWB4NPV9cvTPvQ==
+
+"@ledge-framework/view@latest":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@ledge-framework/view/-/view-0.6.2.tgz#2bccebff5a45cfc35c9c5588f8d273dd3e29634d"
+  integrity sha512-O/8PO9uRsmKOM+iyhE2uUfmvtpg+Tdm/uL9s45t/IYkXxXkendmOIJeCzil7JPm/4NcPNKdMCay/uc8l8CDf+w==
+
 "@ngtools/webpack@9.0.7":
   version "9.0.7"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-9.0.7.tgz#2d9397544afcf503530eafc764c64d40a99fa070"
