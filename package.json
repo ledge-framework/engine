@@ -8,6 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "build:ci": "ng build --prod",
     "build:render": "ng build @ledge-framework/render --prod",
     "build:view": "ng build @ledge-framework/view --prod",
     "publish:render": "cd @ledge-framework/render && npm publish --access=public",
