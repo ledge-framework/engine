@@ -2,7 +2,9 @@
 
 > Legde framework is a documentation as code practises framework.
 
-demo page: [https://devops.phodal.com/](https://devops.phodal.com/)
+demo page: [https://devops.phodal.com/helper](https://devops.phodal.com/helper)
+
+online editor: [https://devops.phodal.com/helper](https://devops.phodal.com/helper)
 
 ## Syntax
 
