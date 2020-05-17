@@ -6,6 +6,8 @@ demo page: [https://devops.phodal.com/helper](https://devops.phodal.com/helper)
 
 online editor: [https://devops.phodal.com/helper](https://devops.phodal.com/helper)
 
+![CI](https://github.com/ledge-framework/engine/workflows/CI/badge.svg)
+
 ## Syntax
 
 ### Ledge extend code syntax
