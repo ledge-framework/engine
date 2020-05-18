@@ -14,7 +14,7 @@ import 'brace/theme/monokai';
   styleUrls: ['./ledge-editor.component.scss'],
 })
 export class LedgeEditorComponent implements OnInit, OnDestroy {
-  content = "";
+  content = '';
 
   @ViewChild('split', { static: false }) split: SplitComponent;
   @ViewChild('area1', { static: false }) area1: SplitAreaDirective;

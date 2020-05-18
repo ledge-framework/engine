@@ -13,13 +13,15 @@
       true,
       "attribute",
       "app",
-      "camelCase"
+      "camelCase",
+      "ledge"
     ],
     "component-selector": [
       true,
       "element",
       "app",
-      "kebab-case"
+      "kebab-case",
+      "ledge"
     ],
     "import-blacklist": [
       true,
