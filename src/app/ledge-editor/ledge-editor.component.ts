@@ -3,10 +3,10 @@ import { EMPTY, Subject, Subscription } from 'rxjs';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 import { SplitAreaDirective, SplitComponent } from 'angular-split';
 
+import * as mdData from 'raw-loader!../../assets/docs/help.md';
+
 import 'brace/index';
-import 'brace/mode/markdown';
 import 'brace/theme/github';
-import 'brace/theme/monokai';
 
 @Component({
   selector: 'ledge-editor',
@@ -14,7 +14,7 @@ import 'brace/theme/monokai';
   styleUrls: ['./ledge-editor.component.scss'],
 })
 export class LedgeEditorComponent implements OnInit, OnDestroy {
-  content = '';
+  content = mdData.default;
 
   @ViewChild('split', { static: false }) split: SplitComponent;
   @ViewChild('area1', { static: false }) area1: SplitAreaDirective;
@@ -38,21 +38,6 @@ export class LedgeEditorComponent implements OnInit, OnDestroy {
     enableLiveAutocompletion: true,
   };
   acEditor: any;
-  themes = [
-    'github',
-    'monokai',
-    /*  'chrome',
-    'clouds',
-    'chaos',
-    'eclipse',
-    'iplastic',
-    'tomorrow',
-    'merbivore',
-    'terminal',
-    'textmate',
-    'twilight',
-    'xcode', */
-  ];
   themeSelected = 'github';
   term$ = new Subject<string>();
   private searchSubscription: Subscription;
