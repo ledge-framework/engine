@@ -1395,6 +1395,13 @@ alphanum-sort@^1.0.0:
   resolved "https://registry.yarnpkg.com/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
   integrity sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=
 
+angular-split@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/angular-split/-/angular-split-3.0.3.tgz#cd530dfbd580c3a28b0e0f40b75c6be37bda0ec9"
+  integrity sha512-5m5mCeISmytXnxKijo9PQDQviiDHNCjt/beTVeYeLTGZJbdB5AEk4lslxOV8b7zM7tcv1YN+8jW3xNK1XcApsA==
+  dependencies:
+    tslib "^1.9.0"
+
 ansi-align@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/ansi-align/-/ansi-align-3.0.0.tgz#b536b371cf687caaef236c18d3e21fe3797467cb"
@@ -1865,6 +1872,11 @@ brace-expansion@^1.1.7:
   dependencies:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
+
+brace@^0.11.1:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/brace/-/brace-0.11.1.tgz#4896fcc9d544eef45f4bb7660db320d3b379fe58"
+  integrity sha1-SJb8ydVE7vRfS7dmDbMg07N5/lg=
 
 braces@^2.3.1, braces@^2.3.2:
   version "2.3.2"
@@ -6328,6 +6340,13 @@ ng-packagr@^9.0.0:
     stylus "^0.54.7"
     terser "^4.3.8"
     update-notifier "^4.0.0"
+
+ngx-ace-tern@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/ngx-ace-tern/-/ngx-ace-tern-1.2.2.tgz#b2dca3982fc06b159fbda0a8a185666ee9bd28e6"
+  integrity sha512-31B//hHFcvnajTp4kx7wWLYoJ3+hhnzA6NVnQuh3LWO3AJ/dDn3Ff6eBqNKU1RgrDZ2jBEE9dt1oTyfx3WmnSw==
+  dependencies:
+    tslib "^1.9.0"
 
 ngx-markdown@^9.0.0:
   version "9.0.0"

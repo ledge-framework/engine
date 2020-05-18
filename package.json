@@ -16,6 +16,9 @@
     "publish:view": "cd @ledge-framework/view && npm publish --access=public"
   },
   "private": true,
+  "browser": {
+    "crypto": false
+  },
   "dependencies": {
     "@angular/animations": "~9.0.3",
     "@angular/common": "~9.0.3",
@@ -41,6 +44,9 @@
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2",
+    "angular-split": "^3.0.3",
+    "ngx-ace-tern": "^1.2.2",
+    "brace": "^0.11.1",
     "@ledge-framework/render": "latest",
     "@ledge-framework/view": "latest"
   },

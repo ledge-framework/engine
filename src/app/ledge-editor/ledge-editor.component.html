@@ -1,0 +1,25 @@
+<as-split
+  unit="percent"
+  [direction]="direction"
+  (dragEnd)="dragEnd('percent', $event)"
+  #split="asSplit"
+  class="helper"
+>
+  <as-split-area size="30" #area1="asSplitArea" class="source">
+    <div
+      #editor
+      ace-editor
+      [text]="content"
+      [mode]="'markdown'"
+      [theme]="themeSelected"
+      [options]="aceOptions"
+      [readOnly]="false"
+      (textChanged)="onAceChange($event)"
+      (editorRef)="editorRef($event)"
+      class="md-editor"
+    ></div>
+  </as-split-area>
+  <as-split-area size="70" #area2="asSplitArea">
+    <ledge-render class="sample" [content]="content"></ledge-render>
+  </as-split-area>
+</as-split>
