@@ -20,8 +20,7 @@ import { MatButtonModule } from '@angular/material/button';
     CustomMaterialModule,
     VirtualScrollerModule,
     RouterModule,
-    LedgeRenderModule,
-    MatButtonModule
+    LedgeRenderModule
   ],
   exports: [LedgeMarkdownRenderComponent, LedgeMultipleDocsComponent]
 })
