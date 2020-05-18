@@ -1,6 +1,6 @@
-# Ledge Framework Render
+# Ledge Framework View
 
-> Ledge Framework Render goal is build pure angular's markdown render, it can convert markdown to chart, graph, customize-table & make it extendable.
+> Ledge Framework View goal is a container view for render view in browser with Material Design
 
 homepage: [https://github.com/phodal/ledge/tree/master/projects/ledge-render](https://github.com/phodal/ledge/tree/master/projects/ledge-render)
 
