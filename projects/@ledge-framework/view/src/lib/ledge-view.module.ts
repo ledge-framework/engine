@@ -3,12 +3,12 @@ import { LedgeMarkdownRenderComponent } from './ledge-markdown-render/ledge-mark
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VirtualScrollerModule } from 'ngx-virtual-scroller';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { LedgeRenderModule } from '@ledge-framework/render';
 import { CustomMaterialModule } from './custom-material.module';
 import { LedgeMultipleDocsComponent } from './ledge-multiple-docs/ledge-multiple-docs.component';
 import { RouterModule } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -20,8 +20,10 @@ import { RouterModule } from '@angular/router';
     CustomMaterialModule,
     VirtualScrollerModule,
     RouterModule,
-    LedgeRenderModule
+    LedgeRenderModule,
+    MatButtonModule
   ],
   exports: [LedgeMarkdownRenderComponent, LedgeMultipleDocsComponent]
 })
-export class LedgeViewModule { }
+export class LedgeViewModule {
+}
