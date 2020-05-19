@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import { DoBootstrap, Injector, NgModule } from '@angular/core';
+import { AngularSplitModule } from 'angular-split';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {AngularSplitModule} from 'angular-split';
+
+import { createCustomElement } from '@angular/elements';
+import { LedgeRenderComponent } from '@ledge-framework/render';
 
 @NgModule({
   declarations: [
@@ -17,4 +19,11 @@ import {AngularSplitModule} from 'angular-split';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule implements DoBootstrap {
+  constructor(private injector: Injector) {
+    const webComponent = createCustomElement(LedgeRenderComponent, {injector});
+    customElements.define('ledge-render', webComponent);
+  }
+
+  ngDoBootstrap() {}
+}
