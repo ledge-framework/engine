@@ -14,9 +14,11 @@
     "build:view": "ng build @ledge-framework/view --prod",
     "publish:render": "cd @ledge-framework/render && npm publish --access=public",
     "publish:view": "cd @ledge-framework/view && npm publish --access=public",
-    "dev:render": "ng build @ledge-framework/render --watch",
+    "dev:render": "npm-run-all --parallel watch:render watch-styles:render",
+    "watch:render": "ng build @ledge-framework/render --watch",
     "dev:view": "ng build @ledge-framework/view --watch",
-    "bundle-styles:render": "gulp --gulpfile ./projects/@ledge-framework/render/gulpfile.js"
+    "bundle-styles:render": "gulp --gulpfile ./projects/@ledge-framework/render/gulpfile.js",
+    "watch-styles:render": "gulp --gulpfile ./projects/@ledge-framework/render/gulpfile.js sass:watch"
   },
   "private": true,
   "browser": {
@@ -74,6 +76,7 @@
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
     "ng-packagr": "^9.0.0",
+    "npm-run-all": "^4.1.5",
     "protractor": "~5.4.3",
     "sass": "^1.26.5",
     "tslint": "~5.18.0",

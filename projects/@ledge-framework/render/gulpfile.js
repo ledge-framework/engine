@@ -12,5 +12,11 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./prebuild-theme'));
 });
 
+gulp.task('sass:watch', () => {
+  gulp.watch('./src/lib/theme/*.scss', (done) => {
+      gulp.series(['sass'])(done);
+  });
+});
+
 
 gulp.task('default', gulp.series(['sass']));
