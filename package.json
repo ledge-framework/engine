@@ -19,7 +19,7 @@
     "dev:view": "ng build @ledge-framework/view --watch",
     "bundle-styles:render": "gulp --gulpfile ./projects/@ledge-framework/render/gulpfile.js",
     "watch-styles:render": "gulp --gulpfile ./projects/@ledge-framework/render/gulpfile.js sass:watch",
-    "deploy": "ng deploy --repo https://github.com/ledge-framework/jekyll-dist --base-href=/jekyll-dist/"
+    "deploy": "ng build --prod --output-hashing none && ng deploy --no-build --repo https://github.com/ledge-framework/jekyll-dist --base-href=/jekyll-dist/"
   },
   "private": true,
   "browser": {
