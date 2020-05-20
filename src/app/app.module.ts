@@ -25,6 +25,6 @@ export class AppModule implements DoBootstrap {
 
   ngDoBootstrap() {
     const webComponent = createCustomElement(LedgeRenderComponent, {injector: this.injector});
-    customElements.define('ledge-render', webComponent);
+    customElements.define('ledge', webComponent);
   }
 }
