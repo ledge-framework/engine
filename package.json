@@ -18,7 +18,8 @@
     "watch:render": "ng build @ledge-framework/render --watch",
     "dev:view": "ng build @ledge-framework/view --watch",
     "bundle-styles:render": "gulp --gulpfile ./projects/@ledge-framework/render/gulpfile.js",
-    "watch-styles:render": "gulp --gulpfile ./projects/@ledge-framework/render/gulpfile.js sass:watch"
+    "watch-styles:render": "gulp --gulpfile ./projects/@ledge-framework/render/gulpfile.js sass:watch",
+    "deploy": "ng deploy --repo https://github.com/ledge-framework/jekyll-dist"
   },
   "private": true,
   "browser": {
