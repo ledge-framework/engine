@@ -21,9 +21,10 @@ import { LedgeRenderComponent } from '@ledge-framework/render';
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
-    const webComponent = createCustomElement(LedgeRenderComponent, {injector});
-    customElements.define('ledge-render', webComponent);
   }
 
-  ngDoBootstrap() {}
+  ngDoBootstrap() {
+    const webComponent = createCustomElement(LedgeRenderComponent, {injector: this.injector});
+    customElements.define('ledge-render', webComponent);
+  }
 }
