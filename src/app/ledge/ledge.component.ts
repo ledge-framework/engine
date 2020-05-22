@@ -1,16 +1,22 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'ledge',
   templateUrl: './ledge.component.html',
   styleUrls: ['./ledge.component.scss']
 })
-export class LedgeComponent implements OnInit {
-  @Input() content = '';
+export class LedgeComponent implements OnInit, OnChanges {
+  @Input('content') content = '';
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
   }
 
+  ngOnInit(): void {
+    console.log(this.content);
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    const { content = null } = changes;
+    this.content = content?.currentValue || null;
+  }
 }
