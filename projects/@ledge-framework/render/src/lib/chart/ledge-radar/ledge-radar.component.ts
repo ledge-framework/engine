@@ -134,7 +134,7 @@ export class LedgeRadarComponent implements OnInit, OnChanges, AfterViewInit {
           normal: {
             color: this.config.areaColor[j]
           }
-        }
+        };
         seriesData[j].areaStyle = {
           normal: {
             color: this.config.areaColor[j]

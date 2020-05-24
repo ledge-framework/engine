@@ -6,7 +6,7 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
   styleUrls: ['./ledge.component.scss']
 })
 export class LedgeComponent implements OnInit, OnChanges {
-  @Input('content') content = '';
+  @Input() content = '';
 
   constructor() {
   }
