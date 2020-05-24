@@ -19,14 +19,19 @@ import { LedgeRenderModule } from '@ledge-framework/render';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [LedgeComponent]
+  // bootstrap: [LedgeComponent],
+  entryComponents: [LedgeComponent]
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
+    if (customElements.get("ledge")) {
+      return;
+    }
+
+    const webComponent = createCustomElement(LedgeComponent, {injector: this.injector});
+    customElements.define('ledge-theme', webComponent);
   }
 
   ngDoBootstrap() {
-    const webComponent = createCustomElement(LedgeComponent, {injector: this.injector});
-    customElements.define('ledge', webComponent);
   }
 }
