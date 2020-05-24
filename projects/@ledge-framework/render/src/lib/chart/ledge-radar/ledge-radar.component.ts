@@ -95,6 +95,7 @@ export class LedgeRadarComponent implements OnInit, OnChanges, AfterViewInit {
           max: 5,
         });
 
+        console.log(nameValuesSplit.length);
         if (nameValuesSplit.length >= 2) {
           this.buildSeriesData(nameValuesSplit, legend, seriesData);
         }
@@ -129,7 +130,16 @@ export class LedgeRadarComponent implements OnInit, OnChanges, AfterViewInit {
         seriesData[j].value.push(parseInt(valuesSplit[j], 10));
       }
       if (this.config.areaColor) {
-        seriesData[j].areaStyle = this.config.areaColor[j];
+        seriesData[j].itemStyle = {
+          normal: {
+            color: this.config.areaColor[j]
+          }
+        }
+        seriesData[j].areaStyle = {
+          normal: {
+            color: this.config.areaColor[j]
+          }
+        };
       }
     }
   }
