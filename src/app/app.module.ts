@@ -24,7 +24,7 @@ import { LedgeRenderModule } from '@ledge-framework/render';
 })
 export class AppModule implements DoBootstrap {
   constructor(private injector: Injector) {
-    if (customElements.get("ledge")) {
+    if (customElements.get('ledge')) {
       return;
     }
 
