@@ -61,6 +61,38 @@ config: {"type": "slider"}
 
 ## Usage
 
+### Use with Web Components
+
+1. import styles
+
+```html
+<link rel="stylesheet" href="https://theme.ledge.ink/styles.css">
+```
+
+2. import code
+
+```html
+<div id="ledge-content"></div>
+<script>
+  var content = document.getElementById('ledge-content');
+  var tile = document.createElement('ledge-theme');
+  var text = "{{ page.content | uri_escape }}"
+  tile.setAttribute('content', decodeURIComponent(text));
+
+  content.appendChild(tile);
+</script>
+```
+
+3. import script
+
+```html
+<script src="https://theme.ledge.ink/runtime-es5.js"></script>
+<script src="https://theme.ledge.ink/polyfills-es5.js"></script>
+<script src="https://theme.ledge.ink/main-es5.js"></script>
+```
+
+### Use in Angular
+
 1.install: `yarn add @ledge-framework/render`
 2.import module
 
@@ -76,7 +108,15 @@ import { LedgeRenderModule } from '@ledge-framework/render';
 })
 ```
 
-3.use it
+3. import styles
+
+```
+@import "~@ledge-framework/render/prebuild-theme/index.css";
+```
+
+or import in `angular.json`
+
+4.use it
 
 ```
 <ledge-render [content]="content"></ledge-render>
