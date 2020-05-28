@@ -126,7 +126,7 @@ export class LedgeRadarComponent implements OnInit, OnChanges, AfterViewInit {
 
       seriesData[j].name = legend[j];
       if (valuesSplit[j]) {
-        seriesData[j].value.push(parseInt(valuesSplit[j], 10));
+        seriesData[j].value.push(parseFloat(valuesSplit[j]));
       }
       if (this.config.areaColor) {
         seriesData[j].itemStyle = {
