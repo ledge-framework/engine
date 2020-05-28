@@ -125,7 +125,7 @@ export class LedgeRenderComponent implements OnInit, OnChanges {
     const token: Token = this.token;
     switch (token.type) {
       case 'table':
-        let results = this.buildTableCelss(token);
+        const results = this.buildTableCelss(token);
         token.cells = results;
         this.markdownData.push(token);
         break;
@@ -213,13 +213,13 @@ export class LedgeRenderComponent implements OnInit, OnChanges {
   }
 
   private buildTableCelss(token: marked.Tokens.Table) {
-    let results = [];
-    for (let column of token.cells) {
-      let newCol = [];
-      for (let cell of column) {
+    const results = [];
+    for (const column of token.cells) {
+      const newCol = [];
+      for (const cell of column) {
         newCol.push(this.renderInline(cell, this.tokens.links));
       }
-      results.push(newCol)
+      results.push(newCol);
     }
     return results;
   }
