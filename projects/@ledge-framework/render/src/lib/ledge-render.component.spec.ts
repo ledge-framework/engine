@@ -77,11 +77,10 @@ describe('LedgeChecklistComponent', () => {
 
   it('should support for table inline', () => {
     const content = `
-| 工具          | 项目地址                                                                                                 |
-| ------------- | -------------------------------------------------------------------------------------------------------- |
-| ApacheBench   | [https://httpd.apache.org/docs/2.4/programs/ab.html](https://httpd.apache.org/docs/2.4/programs/ab.html) |
-| wrk           | [https://github.com/wg/wrk](https://github.com/wg/wrk)                                                   |
-| Apache JMeter | [https://jmeter.apache.org/](https://jmeter.apache.org/)   
+| 工具          | 项目地址                          |
+| ------------- | ------------------------------- |
+| wrk           | [https://github.com/wg/wrk](https://github.com/wg/wrk)     |
+| Apache JMeter | [https://jmeter.apache.org/](https://jmeter.apache.org/)   |
 
 `;
 
