@@ -74,4 +74,24 @@ describe('LedgeChecklistComponent', () => {
     expect(component.markdownData[0].data[0].checked).toEqual(true);
     expect(component.markdownData[0].data[0].children[0].checked).toEqual(false);
   });
+
+  it('should support for table inline', () => {
+    const content = `
+| 工具          | 项目地址                                                                                                 |
+| ------------- | -------------------------------------------------------------------------------------------------------- |
+| ApacheBench   | [https://httpd.apache.org/docs/2.4/programs/ab.html](https://httpd.apache.org/docs/2.4/programs/ab.html) |
+| wrk           | [https://github.com/wg/wrk](https://github.com/wg/wrk)                                                   |
+| Apache JMeter | [https://jmeter.apache.org/](https://jmeter.apache.org/)   
+
+`;
+
+    const simpleChange = new SimpleChange('', content, false);
+    const changesObj: SimpleChanges = {
+      content: simpleChange
+    };
+    component.ngOnChanges(changesObj);
+
+    expect(component.markdownData[0].type).toEqual('table');
+    // expect(component.markdownData[0].cells[0]).toEqual();
+  });
 });
