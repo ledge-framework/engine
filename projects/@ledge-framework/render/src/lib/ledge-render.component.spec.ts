@@ -91,6 +91,7 @@ describe('LedgeChecklistComponent', () => {
     component.ngOnChanges(changesObj);
 
     expect(component.markdownData[0].type).toEqual('table');
-    // expect(component.markdownData[0].cells[0]).toEqual();
+    expect(component.markdownData[0].cells[0][1])
+      .toEqual('<a target="_blank" href="https://github.com/wg/wrk">https://github.com/wg/wrk</a>');
   });
 });
