@@ -33,4 +33,13 @@ describe('LedgeRadarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should success build option', () => {
+    const data = {name: '团队技能图谱示例', children: [{name: 'Jenkins: 3.5'}, {name: 'Chef: 3.3'}]};
+    component.config = {};
+
+    const buildOption = component.buildOption(data);
+
+    expect(buildOption.series[0].data[0].value).toEqual([3.5, 3.3]);
+  });
 });

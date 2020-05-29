@@ -94,4 +94,22 @@ describe('LedgeChecklistComponent', () => {
     expect(component.markdownData[0].cells[0][1])
       .toEqual('<a target="_blank" href="https://github.com/wg/wrk">https://github.com/wg/wrk</a>');
   });
+
+  it('should support for radar float', () => {
+    const content = `
+\`\`\`radar
+ - 团队技能图谱示例
+  - Jenkins: 3.5
+  - Chef: 3.3
+\`\`\`
+`;
+
+    const simpleChange = new SimpleChange('', content, false);
+    const changesObj: SimpleChanges = {
+      content: simpleChange
+    };
+    component.ngOnChanges(changesObj);
+
+    expect(component.markdownData[0].type).toEqual('radar');
+  });
 });

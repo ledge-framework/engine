@@ -40,7 +40,7 @@ export class LedgeRadarComponent implements OnInit, OnChanges, AfterViewInit {
     myChart.setOption(option as any);
   }
 
-  private buildOption(data) {
+  buildOption(data) {
     const {indicator, legend, seriesData} = this.buildIndicatorAndSeries(data);
 
     const defaultOption: any = {
