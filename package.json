@@ -37,7 +37,7 @@
     "@angular/platform-browser": "~9.0.3",
     "@angular/platform-browser-dynamic": "~9.0.3",
     "@angular/router": "~9.0.3",
-    "@ledge-framework/render": "0.7.0",
+    "@ledge-framework/render": "0.7.3",
     "@ledge-framework/view": "latest",
     "angular-split": "^3.0.3",
     "brace": "^0.11.1",
