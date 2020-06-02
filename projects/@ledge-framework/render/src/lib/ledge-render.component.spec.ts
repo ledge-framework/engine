@@ -112,4 +112,20 @@ describe('LedgeChecklistComponent', () => {
 
     expect(component.markdownData[0].type).toEqual('radar');
   });
+  it('should add target for link', () => {
+    const content = `
+[Phodal](https://www.phodal.com)
+`;
+
+    const simpleChange = new SimpleChange('', content, false);
+    const changesObj: SimpleChanges = {
+      content: simpleChange
+    };
+    component.ngOnChanges(changesObj);
+
+    expect(component.markdownData[0].type).toEqual('paragraph');
+    expect(component.markdownData[0].data).toEqual('<a target="_blank" href="https://www.phodal.com">Phodal</a>');
+  });
+
+
 });
