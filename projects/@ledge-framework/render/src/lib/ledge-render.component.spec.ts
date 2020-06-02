@@ -43,7 +43,7 @@ describe('LedgeChecklistComponent', () => {
 
 ## 第二个标题
 
-    
+
     `;
 
     const simpleChange = new SimpleChange('', content, false);
