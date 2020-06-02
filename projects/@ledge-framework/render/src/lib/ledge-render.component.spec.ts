@@ -37,6 +37,28 @@ describe('LedgeChecklistComponent', () => {
     expect(component.markdownData[0].data).toEqual(content);
   });
 
+  it('should build heading anchor', () => {
+    const content = `
+# 第一个标题 P{}|":<>?}
+
+## 第二个标题
+
+    
+    `;
+
+    const simpleChange = new SimpleChange('', content, false);
+    const changesObj: SimpleChanges = {
+      content: simpleChange
+    };
+    component.ngOnChanges(changesObj);
+
+    expect(component.markdownData.length).toEqual(2);
+    expect(component.markdownData[0].type).toEqual('heading');
+    expect(component.markdownData[0].text).toEqual('第一个标题 P{}|&quot;:&lt;&gt;?}');
+    expect(component.markdownData[0].anchor).toEqual('第一个标题-p');
+    expect(component.markdownData[1].headingIndex).toEqual(1);
+  });
+
   it('should build checklist', () => {
     const content = `
 \`\`\`checklist
