@@ -84,6 +84,34 @@
     "protractor": "~5.4.3",
     "sass": "^1.26.5",
     "tslint": "~5.18.0",
-    "typescript": "~3.7.5"
+    "typescript": "~3.7.5",
+    "cz-conventional-changelog": "3.1.0",
+    "husky": "^4.2.3",
+    "lint-staged": ">=10",
+    "prettier": "^2.0.2",
+    "stylelint": "^13.3.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.16.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn run test:ci"
+    }
+  },
+  "lint-staged": {
+    "src/app/**/*.{css,scss}": [
+      "stylelint --syntax=scss",
+      "prettier --parser --write"
+    ],
+    "{src,test}/**/*.ts": [
+      "prettier --write --single-quote"
+    ],
+    "*.{js,css,md}": "prettier --write"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
