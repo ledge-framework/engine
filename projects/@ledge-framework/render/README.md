@@ -1,56 +1,14 @@
-# Ledge Framework Render
+# Ledge Framework Engine
 
-> Ledge Framework Render goal is build pure angular's markdown render, it can convert markdown to chart, graph, customize-table & make it extendable.
+> Legde framework is a documentation as code practises framework.
 
-homepage: [https://github.com/phodal/ledge/tree/master/projects/ledge-render](https://github.com/phodal/ledge/tree/master/projects/ledge-render)
+demo page: [https://devops.phodal.com/helper](https://devops.phodal.com/helper)
 
-demo page: [https://devops.phodal.com/](https://devops.phodal.com/)
+online editor: [https://devops.phodal.com/helper](https://devops.phodal.com/helper)
 
-## Usage
+![CI](https://github.com/ledge-framework/engine/workflows/CI/badge.svg)
 
-1.install: `yarn add @ledge-framework/render`
-2.import module
-
-```
-import { LedgeRenderModule } from '@ledge-framework/render';
-
-@NgModule({
-  imports: [
-    ...
-    LedgeRenderModule,
-  ]
-  ...
-})
-```
-
-3.use it
-
-```
-<ledge-render [content]="content"></ledge-render>
-```
-
-## Development
-
-### Develop in Ledge website project
-
-Use [yarn link](https://classic.yarnpkg.com/en/docs/cli/link/) to avoid reinstalling the library on every build.
-
-1. `cd ./dist/ledge-render`
-2. `yarn link`
-3. in root dir, run `yarn link "@ledge-framework/render"`, it will use `./dist/ledge-render` instead.
-4. `yarn build ledge-render --watch`
-5. `yarn start`
-
-### Develop in CodeSandbox
-
-[![Edit @ledge-framework/render](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/ledge-frameworkrender-349x9?fontsize=14&hidenavigation=1&theme=dark)
-
-### Add new markdown syntax
-
-1. design new markdown code syntax
-2. add type to `handleCode` in `ledge-render.component.ts`
-3. use `ng g c` to generate new component
-4. link to new component
+## Syntax
 
 ### Ledge extend code syntax
 
@@ -87,7 +45,7 @@ Use [yarn link](https://classic.yarnpkg.com/en/docs/cli/link/) to avoid reinstal
 - pipeline。ci pipeline
 - maturity。check, rating with radrar for maturity
 
-### 权衡滑块示例
+### slide examples
 
 ````
 ```toolset
@@ -101,12 +59,68 @@ config: {"type": "slider"}
 ```
 ````
 
-## Roadmap
+## Usage
 
-Todo:
+### Use with Web Components
 
-- plugable
-  - expose API
+1. import styles
+
+```html
+<link rel="stylesheet" href="https://theme.ledge.ink/styles.css" />
+```
+
+2. import code
+
+```html
+<div id="ledge-content"></div>
+<script>
+  var content = document.getElementById("ledge-content");
+  var tile = document.createElement("ledge-theme");
+  var text = "{{ page.content | uri_escape }}";
+  tile.setAttribute("content", decodeURIComponent(text));
+
+  content.appendChild(tile);
+</script>
+```
+
+3. import script
+
+```html
+<script src="https://theme.ledge.ink/runtime-es5.js"></script>
+<script src="https://theme.ledge.ink/polyfills-es5.js"></script>
+<script src="https://theme.ledge.ink/main-es5.js"></script>
+```
+
+### Use in Angular
+
+1.install: `yarn add @ledge-framework/render`
+2.import module
+
+```
+import { LedgeRenderModule } from '@ledge-framework/render';
+
+@NgModule({
+  imports: [
+    ...
+    LedgeRenderModule,
+  ]
+  ...
+})
+```
+
+3. import styles
+
+```
+@import "~@ledge-framework/render/prebuild-theme/index.css";
+```
+
+or import in `angular.json`
+
+4.use it
+
+```
+<ledge-render [content]="content"></ledge-render>
+```
 
 ## LICENSE
 
