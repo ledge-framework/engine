@@ -1,60 +1,126 @@
-# Ledge Framework View
+# Ledge Framework Engine
 
-> Ledge Framework View goal is a container view for render view in browser with Material Design
+> Legde framework is a documentation as code practises framework.
 
-homepage: [https://github.com/phodal/ledge/tree/master/projects/ledge-render](https://github.com/phodal/ledge/tree/master/projects/ledge-render)
+demo page: [https://devops.phodal.com/helper](https://devops.phodal.com/helper)
 
-demo page: [https://devops.phodal.com/](https://devops.phodal.com/)
+online editor: [https://devops.phodal.com/helper](https://devops.phodal.com/helper)
+
+![CI](https://github.com/ledge-framework/engine/workflows/CI/badge.svg)
+
+## Syntax
+
+### Ledge extend code syntax
+
+````
+```process-step
+ - step1
+   - demo
+   - kanban
+```
+````
+
+- Chart
+  - echarts. Echarts chart.
+  - chart. Echarts bar chart.
+  - mindmap. Markdown List to mindmap.
+  - radar. Markdown List to radar chart.
+  - tech radar. Markdown list to tech radar chart.
+  - pie。Pie chart
+  - quadrant。quadrant chart
+  - pyramid。pyramid chart
+- graphviz。dot to graph
+- process visualization
+  - process-table。process chart
+  - process-step。process chart 2
+  - process-card。card process chart
+  - dev-process。process with logo
+  - step-line。title only line chart
+  - table-step。with arrow table chart
+- checklist。checklists
+- mermaid。use [mermaid](https://mermaid-js.github.io/mermaid/) as visual tools
+- toolset。use toolset components to extends
+  - slider
+  - line-chart
+- pipeline。ci pipeline
+- maturity。check, rating with radrar for maturity
+
+### slide examples
+
+````
+```toolset
+ - 用户体验
+ - 时间
+ - 成本
+ - 安全
+ - 范围
+
+config: {"type": "slider"}
+```
+````
 
 ## Usage
 
-1.install: `yarn add @ledge-framework/view`
+### Use with Web Components
+
+1. import styles
+
+```html
+<link rel="stylesheet" href="https://theme.ledge.ink/styles.css" />
+```
+
+2. import code
+
+```html
+<div id="ledge-content"></div>
+<script>
+  var content = document.getElementById("ledge-content");
+  var tile = document.createElement("ledge-theme");
+  var text = "{{ page.content | uri_escape }}";
+  tile.setAttribute("content", decodeURIComponent(text));
+
+  content.appendChild(tile);
+</script>
+```
+
+3. import script
+
+```html
+<script src="https://theme.ledge.ink/runtime-es5.js"></script>
+<script src="https://theme.ledge.ink/polyfills-es5.js"></script>
+<script src="https://theme.ledge.ink/main-es5.js"></script>
+```
+
+### Use in Angular
+
+1.install: `yarn add @ledge-framework/render`
 2.import module
 
 ```
-import { LedgeViewModule } from '@ledge-framework/view';
+import { LedgeRenderModule } from '@ledge-framework/render';
 
 @NgModule({
   imports: [
     ...
-    LedgeViewModule,
+    LedgeRenderModule,
   ]
   ...
 })
 ```
 
-3.
+3. import styles
 
-use single render:
-
-```html
-<ledge-markdown-render sourceDir="{{urlPrefix}}/{{source}}.md" [data]="content">
-</ledge-markdown-render>
+```
+@import "~@ledge-framework/render/prebuild-theme/index.css";
 ```
 
-use multiple docs render
+or import in `angular.json`
 
-```html
-<ledge-multiple-docs
-  [items]="items"
-  [currentUrl]="currentUrl"
-  [urlPrefix]="urlPrefix"
-  [source]="currentSource"
->
-</ledge-multiple-docs>
+4.use it
+
 ```
-
-## Development
-
-### Develop in Ledge website project
-
-Use [yarn link](https://classic.yarnpkg.com/en/docs/cli/link/) to avoid reinstalling the library on every build.
-
-1. `cd ./dist/ledge-view`
-2. `yarn link`
-3. in root dir, run `yarn link "@ledge-framework/view"`, it will use `./dist/ledge-render` instead.
-4. `yarn build ledge-render --watch`
-5. `yarn start`
+<ledge-render [content]="content"></ledge-render>
+```
 
 ## LICENSE
 
