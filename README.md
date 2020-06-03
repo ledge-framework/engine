@@ -7,6 +7,8 @@ demo page: [https://devops.phodal.com/helper](https://devops.phodal.com/helper)
 online editor: [https://devops.phodal.com/helper](https://devops.phodal.com/helper)
 
 ![CI](https://github.com/ledge-framework/engine/workflows/CI/badge.svg)
+![npm](https://img.shields.io/npm/v/@ledge-framework/render?label=%40ledge-framework%2Frender)
+![npm](https://img.shields.io/npm/v/@ledge-framework/view?label=%40ledge-framework%2Fview)
 
 ## Syntax
 
