@@ -1,0 +1,9 @@
+<div class="markdown-process-step">
+    <div class="process-step-column" *ngFor="let row of data;let last = last;">
+        <div class="process-title">{{row.name}}</div>
+        <div class="process-body">
+            <div class="process-step-item" *ngFor="let cell of row.children" [innerHTML]="cell.name"></div>
+        </div>
+        <div class="step-symbol" *ngIf="!last"></div>
+    </div>
+</div>
