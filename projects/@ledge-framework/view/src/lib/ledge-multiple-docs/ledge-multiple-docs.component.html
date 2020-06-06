@@ -12,6 +12,7 @@
   <mat-drawer-content #drawerContent>
     <ledge-markdown-render
       sourceDir="{{urlPrefix}}/{{source}}.md"
+      baseUrl="{{baseUrl}}/{{urlPrefix}}"
       [data]="content">
     </ledge-markdown-render>
   </mat-drawer-content>

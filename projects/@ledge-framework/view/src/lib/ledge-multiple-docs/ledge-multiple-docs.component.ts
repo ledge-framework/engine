@@ -28,6 +28,7 @@ export class LedgeMultipleDocsComponent implements OnInit, OnChanges {
   @Input() currentUrl: string;
   @Input() urlPrefix: string;
   @Input() source: string;
+  @Input() baseUrl: string;
 
   constructor(private title: Title, private http: HttpClient) {}
 
