@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { LedgeListItem } from "../model/ledge-chart.model";
+import { LedgeListItem } from '../model/ledge-chart.model';
 
 @Component({
   selector: 'ledge-process-step',
@@ -22,13 +22,13 @@ export class LedgeProcessStepComponent implements OnInit {
     if (this.regex.test(this.data[0].children[0].name)) {
       this.data.map((column) => {
         column.children.map((cell) => {
-          let regExpExecArray = this.regex.exec(cell.name);
+          const regExpExecArray = this.regex.exec(cell.name);
           if (regExpExecArray && regExpExecArray.length >= 2) {
             cell.type = 'type_' + regExpExecArray[1];
             cell.name = regExpExecArray[2];
           }
-        })
-      })
+        });
+      });
     }
 
     this.items = this.data;

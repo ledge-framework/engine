@@ -21,7 +21,7 @@ describe('ProcessStepComponent', () => {
     };
     component.data = [{
       children: [{
-        name: "[1] hello"
+        name: '[1] hello'
       }]
     }];
     fixture.detectChanges();
@@ -32,6 +32,6 @@ describe('ProcessStepComponent', () => {
   });
 
   it('should build cell type', () => {
-      expect(component.data[0].children[0].type).toEqual('type_1')
+      expect(component.data[0].children[0].type).toEqual('type_1');
   });
 });

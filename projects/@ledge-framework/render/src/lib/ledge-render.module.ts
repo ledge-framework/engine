@@ -35,7 +35,7 @@ import { LedgeMaturityComponent } from './components/ledge-maturity/ledge-maturi
 import { ComponentRatingItemComponent } from './components/component-rating-item/component-rating-item.component';
 import { ComponentRatingComponent } from './components/component-rating/component-rating.component';
 import { LedgeTreeComponent } from './chart/ledge-tree/ledge-tree.component';
-import { LedgeProcessStepComponent } from "./components/ledge-process-step/ledge-process-step.component";
+import { LedgeProcessStepComponent } from './components/ledge-process-step/ledge-process-step.component';
 
 const LedgeComponents = [
   LedgeRenderComponent,
