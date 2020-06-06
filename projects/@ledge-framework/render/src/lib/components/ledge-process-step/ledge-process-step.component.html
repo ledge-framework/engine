@@ -5,10 +5,10 @@
         </span>
     </div>
     <div class="process-step-columns">
-        <div class="process-step-column" *ngFor="let row of data;let last = last;">
+        <div class="process-step-column" *ngFor="let row of items;let last = last;">
             <div class="process-title">{{row.name}}</div>
             <div class="process-body">
-                <div class="process-step-item" *ngFor="let cell of row.children" [innerHTML]="cell.name"></div>
+                <div class="process-step-item ledge-type {{cell.type}}" *ngFor="let cell of row.children" [innerHTML]="cell.name"></div>
             </div>
             <div class="step-symbol" *ngIf="!last"></div>
         </div>

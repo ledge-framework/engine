@@ -26,6 +26,7 @@ export interface LedgeListItem {
 
   value?: number;
   itemStyle?: any;
+  type?: any;
 }
 
 export interface LedgeList {

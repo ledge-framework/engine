@@ -10,16 +10,18 @@
 
 .step-heads {
   height: 32px;
+}
 
-  .ledge-type {
-    padding: 6px 10px;
-    border-radius: 6px;
-    margin-left: 6px;
-    color: #fff;
-  }
+
+.ledge-type {
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-left: 6px;
+  //color: #fff;
 
   @extend .ledge-type;
 }
+
 
 .process-step-columns {
   top: 2em;
