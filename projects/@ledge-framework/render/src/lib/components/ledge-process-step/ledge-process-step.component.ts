@@ -15,6 +15,10 @@ export class LedgeProcessStepComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    if (!this.data) {
+      return;
+    }
+
     if (this.regex.test(this.data[0].children[0].name)) {
       this.data.map((column) => {
         column.children.map((cell) => {
@@ -22,8 +26,6 @@ export class LedgeProcessStepComponent implements OnInit {
           if (regExpExecArray && regExpExecArray.length >= 2) {
             cell.type = 'type_' + regExpExecArray[1];
             cell.name = regExpExecArray[2];
-          } else {
-            console.log(cell.name, regExpExecArray);
           }
         })
       })
