@@ -1,6 +1,6 @@
 <div class="markdown-process-step">
     <div class="step-heads" *ngIf="config.heads">
-        <span *ngFor="let head of config.heads;let index = index" class="ledge-type type_{{index}}">
+        <span *ngFor="let head of config.heads;let index = index" class="ledge-type type_{{index+1}}">
             {{head}}
         </span>
     </div>

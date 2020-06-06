@@ -9,7 +9,7 @@ import { LedgeListItem } from "../model/ledge-chart.model";
 export class LedgeProcessStepComponent implements OnInit {
   @Input() data: LedgeListItem[];
   @Input() config: any;
-  regex = /\[(\d+)\]\s?(.*)/gm;
+  regex = /\[(\d+)\]\s?(.*)/;
   items = [];
 
   constructor() { }
