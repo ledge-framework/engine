@@ -1,0 +1,29 @@
+@import '../../theme/base/type';
+
+.markdown-process-step {
+  display: flex;
+  margin: 2em auto;
+  flex: 1;
+  flex-direction: column;
+  position: relative;
+}
+
+.step-heads {
+  height: 32px;
+
+  .ledge-type {
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin-left: 6px;
+    color: #fff;
+  }
+
+  @extend .ledge-type;
+}
+
+.process-step-columns {
+  top: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
