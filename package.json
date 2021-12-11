@@ -50,7 +50,7 @@
     "graphlib-dot": "^0.6.4",
     "marked": "^0.8.0",
     "material-design-icons": "^3.0.1",
-    "mermaid": "^8.5.0",
+    "mermaid": "^8.11.0",
     "ngx-ace-tern": "^1.2.2",
     "ngx-markdown": "^9.0.0",
     "ngx-virtual-scroller": "^4.0.3",
