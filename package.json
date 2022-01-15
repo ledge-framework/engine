@@ -48,7 +48,7 @@
     "document-register-element": "^1.7.2",
     "echarts": "^4.6.0",
     "graphlib-dot": "^0.6.4",
-    "marked": "^0.8.0",
+    "marked": "^4.0.10",
     "material-design-icons": "^3.0.1",
     "mermaid": "^8.13.8",
     "ngx-ace-tern": "^1.2.2",
